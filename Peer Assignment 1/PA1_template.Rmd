@@ -3,7 +3,7 @@
 ## Loading and prepocessing data
 ```{r echo=FALSE,warning=FALSE}
 library(knitr)
-opts_chunk$set(results="hide",warning=FALSE,fig.show="hide",fig.path='figure/')
+opts_chunk$set(warning=FALSE,fig.path='figure/')
 ```
 
 ```{r}

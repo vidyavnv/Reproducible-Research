@@ -1,0 +1,250 @@
+x <- 5 + 7
+x
+y <- x - 3
+y
+z <- c(1.1, 9, 3.14)
+?c
+z
+c(z, 555, z)
+z * 2 + 100
+my_sqrt = sqrt(z - 1)
+my_sqrt <- sqrt(z - 1)
+my_sqrt
+my_div <- z/my_sqrt
+my_div
+c(1,2,3,4) + c(0,10)
+c(1,2,3,4) + c(0,10,100)
+z * 2 + 1000
+my_div
+1:20
+pi:10
+15:1
+?`:`
+seq(1:20)
+seq(1,20)
+seq(1, 10, by=0.5)
+seq(0, 10, by=0.5)
+seq(5, 10, length=30)
+my_seq <- seq(5, 10, length=30)
+length(my_seq)
+1:length(my_seq)
+seq(along = my_seq)
+seq_along(my_seq)
+rep(0, times=40)
+rep(c(0, 1, 2), times=10)
+rep(c(0, 1, 2), each=10)
+num_vect <- c(0.5, 55, -10, 6)
+tf <- num_vect < 1
+tf
+num_vect >= 6
+my_char <- c("My","name","is")
+my_char
+paste(my_char, collapse = " ")
+my_name <- c(my_char, "Vidya")
+my_name
+paste(my_name, collapse = " ")
+paste("Hello", "world!", sep = " ")
+paste(1:3,c("X","Y","Z"), sep = "")
+paste(LETTERS, 1:4, sep = "-")
+x <- c(44, NA, 5, NA)
+x * 3
+y <- rnorm(1000)
+z <- rep(NA, 1000)
+my_data <- sample(c(y,z), 100)
+my_na <- is.na(my_data)
+my_na
+my_data == NA
+sum(my_na)
+my_data
+0/0
+Inf - Inf
+x
+x[1:10]
+x[is.na(x)]
+x[!is.na(x)]
+y <- x[!is.na(x)]
+y
+y<y > 0
+y[y > 0]
+x[x > 0]
+x[!is.na(x) & x > 0]
+y[c(3, 5, 7)]
+x[c(3, 5, 7)]
+x[0]
+x[3000]
+x[c(-2, -10)]
+x[-c(2, 10)]
+vect <- c(foo = 11, bar = 2, norf = NA)
+vect
+names(vect)
+vect <- c(11,2,NA)
+vect2 <- c(11,2,NA)
+names(vect2) <- c("foo", "bar", "norf")
+identical(vect, vect2)
+vect["bar"]
+vect[c("foo", "bar")]
+my_vector <- 1:20
+my_vector
+dim(my_vector)
+length(my_vector)
+dim(my_vector) <- c(4, 5)
+dim(my_vector)
+attributes(my_vector)
+my_vector
+class(my_vector)
+my_matrix <- my_vector
+?matrix
+matrix(1:20, 4, 5)
+matrix(1:20, nrows =  4, ncols = 5)
+matrix(1:20, nrow =  4, ncol = 5)
+my_matrix2 <- matrix(1:20, nrow =  4, ncol = 5)
+identical(my_matrix, my_matrix2)
+patients <- c("Bill", "Gina", "Kelly", "Sean")
+cbind(patients, my_matrix)
+my_data <- data.frame(patients, my_matrix)
+my_data
+class(my_data)
+cnames <- c("patient", "age", "weight", "bp", "rating", "test")
+colnames(my_data)
+colnames(my_data) <- cnames
+my_data
+myapp = oauth_app("twitter",key="GOhQYezt9W1woYuaM0gYi98W2",secret="PzLuITcIgYoI9lYnE3YtCLxf388eThQAH2T2GQ7y7dKecMLgUa")
+oauth_app
+install.packages("ROAuth")
+myapp = oauth_app("twitter",key="GOhQYezt9W1woYuaM0gYi98W2",secret="PzLuITcIgYoI9lYnE3YtCLxf388eThQAH2T2GQ7y7dKecMLgUa")
+library(ROAuth)
+library(RCurl)
+library(twitteR)
+install.packages("twitteR")
+library(twitteR)
+library(rjson)
+library(twitteR)
+library(ROAuth)
+myapp = oauth_app("twitter",key="GOhQYezt9W1woYuaM0gYi98W2",secret="PzLuITcIgYoI9lYnE3YtCLxf388eThQAH2T2GQ7y7dKecMLgUa")
+library(httr)
+myapp = oauth_app("twitter",key="GOhQYezt9W1woYuaM0gYi98W2",secret="PzLuITcIgYoI9lYnE3YtCLxf388eThQAH2T2GQ7y7dKecMLgUa")
+sig = sign_oauth1.0(myapp,token="1191067658-woqumG1dBHfM8jNUAqzOdiqnDgjeeRdqNrcwIhq",token_secret="OolmimZmQi2raCwtl6EwT2tnZ2nPoBZRZB0etQWy57RGz")
+homeTL = GET("https://api.twitter.com/1.1/statuses/home_timeline.json",sig)
+json1 =  content(homeTL)
+json2 = jsonlite::fromJSON(toJSON(json1))
+install.packages("jsonlite")
+json2 = jsonlite::fromJSON(toJSON(json1))
+library(jsonlite)
+json2 = jsonlite::fromJSON(toJSON(json1))
+json1 =  content(homeTL)
+json2 = jsonlite::fromJSON(toJSON(json1))
+json2[1,1:4]
+json2[1,1:8]
+library(RMySQL)
+install.packages("RMySQL")
+install.packages('RMySQL', type='source')
+library(datasets)
+data(cars)
+with(cars, plot(speed,dist))
+library(lattice)
+state <- data.frame(state.x77, region = state.region)
+xplot(Life.Exp ~ Income| region, data = state, layout = c(4,1))
+xplot
+??xplot
+xyplot(Life.Exp ~ Income| region, data = state, layout = c(4,1))
+xyplot(Life.Exp ~ Income| region, data = state, layout = c(1,4))
+library(ggplot2)
+data(mpg)
+qplot(displ,hwy,data=mpg)
+names(mpg)
+qplot(displ,hwy,data=mpg)
+library(datasets)
+hist(airquality$Ozone)
+with(airquality, plot(Wind,Ozone))
+airquality <- transform(airquality, Month = factor(Month))
+Month
+head(airquality)
+library(datasets)
+head(data(airquality))
+data(airquality
+library(datasets)
+library(lattice)
+xyplot(Ozone ~ Wind, data = airquality)
+airquality <- transform(airquality, Month = factor(Month))
+xyplot(Ozone~ Wind | Month, data = airqualit, layout = c(5,1))
+xyplot(Ozone~ Wind | Month, data = airquality, layout = c(5,1))
+p <- xyplot(Ozone ~ Wind, data = airquality)
+print(p)
+set.seed(10)
+x <- rnorm(100)
+f <- rep(0:1,each = 50)
+y <- x+f-f*x+rnorm(100,sd=0.5)
+f <- factor(f,labels=c("group1","group2"))
+xyplot(y~x | f,layout=c(2,1))
+library(ggplot2)
+str(mpg)
+qplot(displ,hwy,data=mpg)
+print(qplot)
+qplot(displ,hwy,data=mpg,color=drv)
+qplot(displ,hwy,data=mpg,geom=c("point","smooth"))
+qplot(hwy,data=mpg,fill=drv)
+qplot(hwy,data=mpg,facets = drv ~.,binwidth=2)
+qplot(hwy,data=mpg,facets = drv ~.,binwidth=3)
+qplot(hwy,data=mpg,facets = drv ~.,binwidth=2)
+qplot(hwy,data=mpg,facets = .~ drv)
+qplot(hwy,data=mpg,facets = . ~ drv)
+qplot(displ,hwy,data=mpg,facets = . ~ drv)
+library(nlme)
+xyplot(weight ~ Time | Diet, BodyWeight)
+data(airquality)
+p <- xyplot(Ozone ~ Wind | factor(Month), data = airquality)
+data(movies)
+qplot(votes, rating, data = movies)
+qplot(votes, rating, data = movies) + geom_smooth()
+qplot(votes, rating, data = movies, panel = panel.loess)
+qplot(votes, rating, data = movies, smooth = "loess")
+qplot(votes, rating, data = movies) + stats_smooth("loess")
+g <- ggplot(movies, aes(votes, rating))
+print(g)
+ggplot(movies, aes(votes, rating)
+library(ggplot2)
+g <- ggplot(movies, aes(votes, rating))
+print(g)
+library(datasets)
+data(airquality)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+airquality = transform(airquality, Month = factor(Month))
+qplot(Wind, Ozone, data = airquality, facets = . ~ Month)
+p <- xyplot(Ozone ~ Wind | factor(Month), data = airquality)
+library(lattice)
+p <- xyplot(Ozone ~ Wind | factor(Month), data = airquality)
+set.seed(12345)
+par(mar=rep(0.2,4))
+dataMatrix <- matrix(rnorm(400),nrow=40)
+matrix
+dataMatrix
+image(1:10,1:40,t(dataMatrix[,nrow(dataMatrix):1]))
+image(1:10,1:40,t(dataMatrix)[,nrow(dataMatrix):1]))
+image(1:10,1:40,t(dataMatrix)[,nrow(dataMatrix):1])
+par(mar=rep(0.2,4))
+heatmap(dataMatrix)
+set.seed(678910)
+for(i in 1:40)
+{}
+for(i in 1:40) {}
+for(i in 1:40) {
+}
+rbinom
+colors
+x <- rnorm(10000)
+y <- rnorm(10000)
+smoothScatter(x,y)
+plot(x,y.pch=19)
+plot(x,y,pch=19)
+plot(x,y,col=rgb(0,0,0,0.2),pch=19)
+kernlab
+kernlab()
+library(kernlab)
+install.packages(kernlab)
+install.package(kernlab)
+install.packages(kernlab)
+install.packages("kernlab")
+library(kernlab)
+install.packages("kernlab")
+library(kernlab)
+activity_data <- read.csv("./data/activity.csv",sep=",",quote = "\",comment.char = "",na.strings = TRUE)
